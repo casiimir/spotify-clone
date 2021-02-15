@@ -1,6 +1,7 @@
 html {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
+  user-select: none;
 }
 
 body {
@@ -26,11 +27,12 @@ hr {
 }
 
 ul {
+  padding: 0;
   list-style: none;
 }
 
 .home {
-  margin: 0 0 80px 250px;
+  margin: 0 0 80px 220px;
   background: #181818;
 }
 .home .wrapperTracks {
@@ -81,9 +83,43 @@ ul {
 
 .sidebar {
   position: fixed;
-  width: 250px;
+  padding: 0 25px;
+  width: 180px;
   height: 100vh;
   background: #121212;
+  color: #B3B3B3;
+}
+.sidebar .sidebar__items {
+  padding: 0;
+}
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  margin: 7.5px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.sidebar ul li:hover {
+  color: #fff;
+  cursor: default;
+}
+.sidebar ul li:active {
+  color: #8d8d8d;
+}
+.sidebar ul li i {
+  margin: 0 5px;
+  font-size: 1.3rem;
+}
+.sidebar ul li span {
+  margin: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.sidebar h5 {
+  margin: 40px 0 0 0;
+  color: #B3B3B3;
+  font-weight: 400;
+  font-size: 0.85rem;
 }
 
 .taskbar {

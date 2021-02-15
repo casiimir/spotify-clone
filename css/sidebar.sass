@@ -1,7 +1,49 @@
-.sidebar
+.sidebar  
   position: fixed
+  padding: 0 25px
 
-  width: 250px
+  width: 180px
   height: 100vh
 
   background: $sidebar-color
+  color: $light-color
+
+  .sidebar__items
+    padding: 0
+
+  ul
+    li
+      display: flex
+      align-items: center
+
+      margin: 7.5px 0
+
+      font-size: .9rem
+      font-weight: 600
+
+      &:hover
+        color: $secondary-color
+        cursor: default
+      
+      &:active
+        color: $extra-color
+        
+      
+      i
+        margin: 0 5px
+
+        font-size: 1.3rem
+
+      span
+        margin: 10px
+
+        font-weight: 600
+        font-size: .9rem
+  
+  h5
+    margin: 40px 0 0 0
+
+    color: $light-color
+
+    font-weight: 400
+    font-size: .85rem
