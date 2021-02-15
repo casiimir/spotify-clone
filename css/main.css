@@ -95,7 +95,7 @@ ul {
 .sidebar ul li {
   display: flex;
   align-items: center;
-  margin: 7.5px 0;
+  margin: 14px 0;
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -108,18 +108,27 @@ ul {
 }
 .sidebar ul li i {
   margin: 0 5px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .sidebar ul li span {
-  margin: 10px;
+  margin: 5px 10px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 .sidebar h5 {
-  margin: 40px 0 0 0;
+  margin: 40px 0 -6px 0;
   color: #B3B3B3;
   font-weight: 400;
   font-size: 0.85rem;
+}
+
+.selectedItem {
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 20px;
+  z-index: 2323;
+  background: #13eb5f;
 }
 
 .taskbar {

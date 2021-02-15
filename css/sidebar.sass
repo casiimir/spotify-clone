@@ -16,7 +16,7 @@
       display: flex
       align-items: center
 
-      margin: 7.5px 0
+      margin: 14px 0
 
       font-size: .9rem
       font-weight: 600
@@ -28,22 +28,33 @@
       &:active
         color: $extra-color
         
-      
       i
         margin: 0 5px
 
-        font-size: 1.3rem
+        font-size: 1.5rem
 
       span
-        margin: 10px
+        margin: 5px 10px
 
         font-weight: 600
-        font-size: .9rem
+        font-size: .85rem
   
   h5
-    margin: 40px 0 0 0
+    margin: 40px 0 -6px 0
 
     color: $light-color
 
     font-weight: 400
     font-size: .85rem
+
+// Symbol on selected item
+.selectedItem
+  position: absolute
+  left: 0  
+
+  width: 4px
+  height: 20px
+  
+  z-index: 2323
+
+  background: $primary-color
