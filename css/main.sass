@@ -1,5 +1,18 @@
 @import variables
 @import normalize
+@import home
+
+html 
+  font-size: 14px
+  font-family: 'Montserrat', sans-serif
+
+*
+  scroll-behavior: smooth
+
+hr
+  margin: 4px 0 16px 0
+  border: 0
+  border-bottom: 1px solid $taskbar-color
 
 .sidebar
   position: fixed
@@ -9,16 +22,12 @@
 
   background: $sidebar-color
 
-.home
-  background: $home-color
-
-  margin-left: 250px
-
 .taskbar
   position: fixed
   bottom: 0
 
   width: 100%
+  height: 60px
   padding: 15px
 
   display: flex

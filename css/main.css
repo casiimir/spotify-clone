@@ -10,6 +10,71 @@ p {
   padding: 0;
 }
 
+.home {
+  margin: 0 0 80px 250px;
+  background: #181818;
+}
+.home .wrapperTracks {
+  padding: 20px 7% 5px;
+}
+.home .wrapperTracks .wrapperTracks__header {
+  display: flex;
+  justify-content: space-between;
+}
+.home .wrapperTracks .wrapperTracks__header .dirBtn .dirBtn__right, .home .wrapperTracks .wrapperTracks__header .dirBtn .dirBtn__left {
+  border: 0;
+  background-color: transparent;
+  color: #B3B3B3;
+  font-family: Courier New, Courier, monospace;
+  font-size: 1.5rem;
+  outline: none;
+  cursor: pointer;
+}
+.home .wrapperTracks .wrapperTracks__header .dirBtn .dirBtn__right:hover, .home .wrapperTracks .wrapperTracks__header .dirBtn .dirBtn__left:hover {
+  color: #fff;
+}
+.home .wrapperTracks .wrapperTracks__header h2 {
+  width: 80%;
+}
+.home .wrapperTracks .wrapperList {
+  display: flex;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+}
+.home .wrapperTracks .wrapperList .wrapperList__card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2% 0 0;
+  scroll-snap-align: start;
+}
+.home .wrapperTracks .wrapperList .wrapperList__card img {
+  width: 220px;
+}
+.home .wrapperTracks .wrapperList .wrapperList__card strong {
+  padding: 10px 0 0 0;
+  font-weight: 600;
+}
+.home .wrapperTracks .wrapperList .wrapperList__card p {
+  padding: 5px 0 0 0;
+  color: #B3B3B3;
+  font-size: 0.9rem;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+hr {
+  margin: 4px 0 16px 0;
+  border: 0;
+  border-bottom: 1px solid #303030;
+}
+
 .sidebar {
   position: fixed;
   width: 250px;
@@ -17,20 +82,16 @@ p {
   background: #121212;
 }
 
-.home {
-  background: #181818;
-  margin-left: 250px;
-}
-
 .taskbar {
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: 60px;
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #282828;
+  background: #303030;
 }
 .taskbar .taskbar__track {
   display: flex;

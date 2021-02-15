@@ -1,0 +1,56 @@
+.home
+  margin: 0 0 80px 250px
+  background: $home-color
+ 
+  .wrapperTracks
+    padding: 20px 7% 5px
+
+    .wrapperTracks__header
+      display: flex
+      justify-content: space-between
+
+      .dirBtn
+        .dirBtn__right, .dirBtn__left
+          border: 0
+
+          background-color: transparent
+          color: $light-color
+
+          font-family: Courier New, Courier, monospace
+          font-size: 1.5rem
+
+          outline: none
+          cursor: pointer
+
+          &:hover
+            color: $secondary-color
+      h2
+        width: 80%
+
+    .wrapperList
+      display: flex
+      overflow: hidden
+      scroll-snap-type: x mandatory
+
+      .wrapperList__card
+        display: flex
+        flex-direction: column
+
+        margin: 0 2% 0 0
+
+        scroll-snap-align: start
+        
+        img
+          width: 220px
+
+        strong
+          padding: 10px 0 0 0
+          font-weight: 600
+        
+        p
+          padding: 5px 0 0 0
+
+          color: $light-color
+          font-size: .9rem
+
+        

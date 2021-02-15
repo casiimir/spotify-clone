@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spotify Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;0,900;1,300;1,400;1,600;1,800;1,900&display=swap" rel="stylesheet">
   <link rel='icon' type='image/png' href="./icon.png"/>
   <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -30,7 +31,54 @@
     </ul>
   </nav>
   <main class="home">
-    <h1>HOME</h1>
+    <!-- Beatles -->
+    <div class="wrapperTracks">
+      <div class="wrapperTracks__header">
+        <h2>Beatles</h2>
+        <div class="dirBtn" id="beatles">
+          <button class="dirBtn__right"> < </button>
+          <button class="dirBtn__left"> > </button>
+        </div>
+      </div>
+      <hr>
+      <div class="wrapperList beatles"></div>
+    </div>
+    <!-- AC/DC -->
+    <div class="wrapperTracks">
+      <div class="wrapperTracks__header">
+        <h2>AC/DC</h2>
+        <div class="dirBtn" id="ac-dc">
+          <button class="dirBtn__right"> < </button>
+          <button class="dirBtn__left"> > </button>
+        </div>
+      </div>
+      <hr>
+      <div class="wrapperList ac-dc"></div>
+    </div>
+    <!-- Queen -->
+    <div class="wrapperTracks">
+      <div class="wrapperTracks__header">
+        <h2>Queen</h2>
+        <div class="dirBtn" id="queen">
+          <button class="dirBtn__right"> < </button>
+          <button class="dirBtn__left"> > </button>
+        </div>
+      </div>
+      <hr>
+      <div class="wrapperList queen"></div>
+    </div>
+    <!-- Black Sabbath -->
+    <div class="wrapperTracks">
+      <div class="wrapperTracks__header">
+        <h2>Black Sabbath</h2>
+        <div class="dirBtn" id="black-sabbath">
+          <button class="dirBtn__right"> < </button>
+          <button class="dirBtn__left"> > </button>
+        </div>
+      </div>
+      <hr>
+      <div class="wrapperList black-sabbath"></div>
+    </div>
   </main>
   <footer class="taskbar">
     <div class="taskbar__track">
@@ -48,6 +96,39 @@
       Setting audio here
     </div>
   </footer>
-  <script src="./js/main.js"></script>
+  <script src="./js/main.js" type="module"></script>
+  <script src="./js/home.js" type="module"></script>  
 </body>
 </html>
+
+
+<!--
+  Band IDs:
+    Beatles: 111247
+    Black Sabbath: 111381
+    AC/DC: 119231
+    Nirvana: 111319
+    Daft Punk: 111492
+    Queen: 111238
+ -->
+
+
+<!-- 
+  Albums ID:
+    Yellow Submarine: 2118146 X
+    Paranoid: 2111578 X
+    Back in Black: 2159636 X
+    Nevermind: 2110839
+    Random Access Memories: 2162908
+    A Night at the Opera: 2116679 X 
+-->
+
+<!-- 
+  Tracks:
+    https://theaudiodb.com/api/v1/json/1/track.php?m=2118146
+    https://theaudiodb.com/api/v1/json/1/track.php?m=2111578
+    https://theaudiodb.com/api/v1/json/1/track.php?m=2159636
+    https://theaudiodb.com/api/v1/json/1/track.php?m=2110839
+    https://theaudiodb.com/api/v1/json/1/track.php?m=2162908
+    https://theaudiodb.com/api/v1/json/1/track.php?m=2116679
+ -->
