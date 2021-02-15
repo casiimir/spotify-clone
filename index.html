@@ -93,18 +93,27 @@
         <strong>Overture</strong>
         <p>Daft Punk</p>
       </div>
-      <i>♥</i>
     </div>
     <div class="taskbar__trackStatus">
-      Track status
+      <div class="audioSetter">
+        <i class="fas fa-step-backward"></i>
+        <i class="fas fa-play"></i>
+        <i class="fas fa-step-forward"></i>
+      </div>
+      <div class="audioProgress">
+        <input type="range" id="volume" name="volume">
+      </div>
     </div>
     <div class="taskbar__trackAudio">
-      Setting audio here
+      <i class="fas fa-volume-up"></i>
+      <input type="range">
+      <i class="fas fa-expand-alt"></i>
     </div>
   </footer>
   <script src="./js/main.js" type="module"></script>
   <script src="./js/sidebar.js" type="module"></script>  
   <script src="./js/home.js" type="module"></script>  
+  <script src="./js/footer.js" type="module"></script>  
 </body>
 </html>
 

@@ -1,0 +1,100 @@
+.taskbar
+  position: fixed
+  bottom: 0
+
+  width: 100%
+  height: 6%
+  min-height: 50px
+
+  padding: 12px
+
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  background: $taskbar-color
+  color: $light-color
+
+  .taskbar__track
+    display: flex
+
+    img
+      height: 55px
+    
+    strong
+      color: $secondary-color
+      font-size: 1rem
+      font-weight: normal
+    
+    p
+      margin-top: 10px
+      font-size: .8rem
+    
+    .info
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+      margin: 0 15px
+  
+  .taskbar__trackStatus
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    > *
+      margin: 0 5px
+
+    i
+      font-size: .9rem
+      margin: 0 10px
+
+      &:hover
+        color: $secondary-color
+        
+      &:active
+        color: $extra-color
+
+
+    .fa-play
+      padding: 11px
+
+      font-size: .9rem
+
+      border: 1px solid $extra-color
+      border-radius: 100%
+
+      &:hover
+        border: 1px solid $secondary-color
+      
+      &:active        
+        border: 1px solid $extra-color
+        color: $extra-color
+
+    .audioProgress
+      input
+        width: 170px
+        height: 4px
+        border-radius: 100%      
+
+  .taskbar__trackAudio
+    padding: 25px
+    display: flex
+    align-items: center
+
+    > *
+      margin: 0 5px
+
+    i:hover
+      color: $secondary-color
+    i:active
+      color: $extra-color
+    
+    input
+      width: 100px
+      height: 4px
+      border-radius: 100%   
+
+
+
+
