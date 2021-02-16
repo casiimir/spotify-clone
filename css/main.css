@@ -259,54 +259,106 @@ button:active {
 
 .artistSection {
   position: relative;
+  margin: 0;
   background: #181818;
-  width: 100%;
-  height: 100vh;
 }
 .artistSection .artistSection--overlay {
   position: absolute;
   width: 100%;
   height: 400px;
-  background: linear-gradient(to top, #181818 20%, rgba(0, 0, 0, 0.5) 70%);
+  background: linear-gradient(to top, #181818 10%, rgba(0, 0, 0, 0.5) 70%);
 }
 .artistSection img {
   width: 100%;
   height: 400px;
   object-fit: cover;
 }
-.artistSection h1 {
+.artistSection .artistSection__header {
+  position: relative;
+  margin-top: -200px;
+  padding: 0 5%;
+}
+.artistSection .artistSection__header h1 {
   font-size: 6rem;
-  transform: translateY(-180px);
 }
-.artistSection .btn {
-  transform: translateY(-180px);
-}
-.artistSection .btn button:nth-child(1) {
+.artistSection .artistSection__header .btn button:nth-child(1) {
   background: #13eb5f;
   border: 0;
 }
-.artistSection .btn button:nth-child(2) {
+.artistSection .artistSection__header .btn button:nth-child(2) {
   width: 140px;
 }
-.artistSection .selectSubPage {
+.artistSection .artistSection__header .selectSubPage {
   display: flex;
   font-weight: 600;
   text-transform: uppercase;
-  transform: translateY(-180px);
 }
-.artistSection .selectSubPage li {
+.artistSection .artistSection__header .selectSubPage li {
   margin: 0 20px;
   font-size: 0.9rem;
   letter-spacing: 1.5px;
 }
-.artistSection .selectSubPage li:nth-child(1)::before {
+.artistSection .artistSection__header .selectSubPage li:nth-child(1)::before {
   position: absolute;
-  left: 38px;
+  left: 130px;
   bottom: -10px;
   width: 30px;
   height: 2px;
   content: "";
   background: #13eb5f;
+}
+.artistSection .mostPopular {
+  margin-top: 40px;
+  padding: 0 5%;
+}
+.artistSection .mostPopular .mostPopular__list {
+  display: flex;
+  flex-direction: column;
+}
+.artistSection .mostPopular .mostPopular__list li {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 38px;
+  border-bottom: 1px solid #303030;
+}
+.artistSection .mostPopular .mostPopular__list li:hover {
+  background-color: #303030;
+}
+.artistSection .mostPopular .mostPopular__list li span {
+  align-self: center;
+  flex-basis: 40px;
+}
+.artistSection .mostPopular .mostPopular__list li :nth-child(3) {
+  flex-basis: 100%;
+}
+.artistSection .albumList {
+  padding: 0 5%;
+}
+.artistSection .albumList h3 {
+  padding: 5px 0 15px 0;
+}
+.artistSection .albumList .albumList__piece .albumList__piece--header {
+  display: flex;
+}
+.artistSection .albumList .albumList__piece .albumList__piece--header > * {
+  align-self: center;
+}
+.artistSection .albumList .albumList__piece .albumList__piece--header img {
+  width: 135px;
+  height: 135px;
+}
+.artistSection .albumList .albumList__piece .albumList__piece--header .header__info {
+  margin: 0 15px;
+  font-size: 1.6rem;
+}
+.artistSection .albumList .albumList__piece .albumList__piece--header .header__info > * {
+  margin: 5px 0;
+}
+.artistSection .albumList .albumList__piece .albumList__piece--header .header__info p {
+  color: #8d8d8d;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */

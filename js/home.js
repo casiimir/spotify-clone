@@ -19,7 +19,9 @@ const createCard = (trackImgSrc, trackTitle, trackDescription, parentClass) => {
 }
 
 const getTracksByAlbum = async (ID, whatIs, searchType) => {
-  const result = await fetch(`${states.baseURL}${whatIs}.php?${searchType}=${ID}`);
+  const result = await fetch(`
+      ${states.baseURL}${states.apiKEY}/${whatIs}.php?${searchType}=${ID}
+  `);
   const data = await result.json();
 
   return data[whatIs];
@@ -40,7 +42,25 @@ const popWrapperList = async (ID, whatIs, searchType, parent) => {
       albumReview = album.strDescriptionEN.slice(0,80) + '...';
     
     createCard(coverImg, album.strAlbum, albumReview, parent);
+    console.log(albumData)
   });
+}
+
+// Top Ten Tracks
+const getTopTen = async (artistName) => {
+  const result = await fetch(`
+      ${states.baseURL}${states.apiKEY}/track-top10.php?s=${artistName}
+  `);
+  const data = await result.json();
+  return data;
+}
+
+// Albums from an artist ID
+const getAlbumsFrom = async (ID) => {
+  const result = await fetch(`${states.baseURL}${states.apiKEY}/album.php?i=${ID}`);
+  const data = await result.json();
+
+  return data;
 }
 
 // Button control carousel wrapperTracks - dirBtn
@@ -67,8 +87,9 @@ const scrollCarouselTo = (element, dir) => {
 }
 
 const states = {
-  baseURL: 'https://theaudiodb.com/api/v1/json/1/',
-  imgURL: 'https://www.theaudiodb.com/images/media/artist/thumb/b2181aae-5cba-496c-bb0c-b4cc0109ebf8.jpg/preview'
+  baseURL: `https://theaudiodb.com/api/v1/json/`,
+  imgURL: 'https://www.theaudiodb.com/images/media/artist/thumb/b2181aae-5cba-496c-bb0c-b4cc0109ebf8.jpg/preview',
+  apiKEY: '523532'
 }
 
 // Self Init
@@ -80,5 +101,7 @@ export {
   getTracksByAlbum,
   popWrapperList,
   setBtnControl,
-  scrollCarouselTo
+  scrollCarouselTo,
+  getTopTen,
+  getAlbumsFrom
 };

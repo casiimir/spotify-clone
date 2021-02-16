@@ -52,28 +52,33 @@
     <div class="artistSection">
       <div class="artistSection--overlay"></div>
       <img src="https://1.bp.blogspot.com/-JBwwgIDnWoc/XBHngQ8Aq5I/AAAAAAAAAAY/Ix9yGqvx0wsrx7q-pd_INJ2Odi2DVB9HwCLcBGAs/s1600/01.jpg" alt="queen-cover-page">
-      <h1>Queen</h1>
-      <div class="btn">
-        <button>Play</button>
-        <button>Follow</button>
-        <button>...</button>
+      
+      <div class="artistSection__header">
+        <h1>Queen</h1>
+        <div class="btn">
+          <button>Play</button>
+          <button>Follow</button>
+          <button>...</button>
+        </div>
+        <ul class="selectSubPage">
+          <li data-noSelect="true">Overview</li>
+          <li data-noSelect="true">Fans also like</li>
+          <li data-noSelect="true">About</li>
+          <li data-noSelect="true">Cocerts</li>
+        </ul>
       </div>
-      <ul class="selectSubPage">
-        <li data-noSelect="true">Overview</li>
-        <li data-noSelect="true">Fans also like</li>
-        <li data-noSelect="true">About</li>
-        <li data-noSelect="true">Cocerts</li>
-      </ul>
+
       <div class="mostPopular">
         <h3>Popular</h3>
         <ul class="mostPopular__list"></ul>
       </div>
+
       <div class="albumList">
         <h3>Albums</h3>
         <hr>
         <div class="albumList__piece">
           <div class="albumList__piece--header">
-            <img src="" alt="album-cover">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Queen_Queen.png/220px-Queen_Queen.png" alt="album-cover">
             <div class="header__info">              
               <p>2020</p>
               <h2>Live Around The World (Deluxe)</h2>
@@ -81,9 +86,10 @@
               <i>...</i>
             </div>
           </div>
-          <div class="albumList__piece--list"></div>
+          <ul class="albumList__piece--list"></ul>
         </div>
       </div>
+      
     </div>
   </main>
   <footer class="taskbar">
@@ -114,5 +120,6 @@
   <script src="./js/sidebar.js" type="module"></script>  
   <!-- <script src="./js/home.js" type="module"></script>   -->
   <script src="./js/footer.js" type="module"></script>  
+  <script src="./js/queen.js" type="module"></script>  
 </body>
 </html>
