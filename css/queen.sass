@@ -55,35 +55,56 @@
 
         background: $primary-color
 
+
+  .topNtop
+    display: flex    
+    padding: 0 4%
+
+    > *
+      margin: 0 20px
         
-  .mostPopular
-    margin-top: 40px
-    padding: 0 5%
+    .mostPopular
+      margin-top: 40px
+      width: 50%
 
-    .mostPopular__list
-      display: flex
-      flex-direction: column
-
-      li
+      .mostPopular__list
         display: flex
-        flex-direction: row
+        flex-direction: column
 
-        width: 100%
-        height: 38px
-
-        border-bottom: 1px solid $taskbar-color
-
-        &:hover
-          background-color: $taskbar-color
-
-        span
+        li
           display: flex
-          align-items: center
-          flex-basis: 40px
-          
-        :nth-child(3)
-          flex-basis: 100%
+          flex-direction: row
+
+          width: 100%
+          height: 38px
+
+          border-bottom: 1px solid $taskbar-color
+
+          &:hover
+            background-color: $taskbar-color
+
+          span
+            display: flex
+            align-items: center
+            flex-basis: 40px
+            
+          :nth-child(3)
+            flex-basis: 100%
+
+    .videos
+      width: 50%
+
+      iframe
+        width: 100%
+        height: 88%
+
+        border-radius: 4px
+        border: 2px solid $taskbar-color
+
+        transform: translateY(40px)
   
+
+
 
   .albumList    
     padding: 0 5%
@@ -137,8 +158,14 @@
         
 
 
-// Audio tag test
 
-// audio::-webkit-media-controls-play-button
-//   -webkit-appearance:none
-//   filter: invert(10%) sepia(15%) saturate(11368%) hue-rotate(670deg) brightness(95%) contrast(94%)
+@media (max-width: 1100px)
+  .topNtop
+    justify-content: center
+    .mostPopular
+      width: 80% !important
+
+    .videos
+      display: none
+    
+    
