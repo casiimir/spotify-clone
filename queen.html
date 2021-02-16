@@ -16,7 +16,7 @@
     <ul class="sidebar__items">
       <li>
         <i class="fas fa-home"></i>
-        <a href="./index.html">
+        <a href="#">
           <span>Home</span>
         </a>
       </li>
@@ -49,53 +49,41 @@
     </ul>
   </nav>
   <main class="home">
-    <!-- Beatles -->
-    <div class="wrapperTracks">
-      <div class="wrapperTracks__header">
-        <h2>Beatles</h2>
-        <div class="dirBtn" id="beatles">
-          <button class="dirBtn__right"> < </button>
-          <button class="dirBtn__left"> > </button>
+    <div class="artistSection">
+      <div class="artistSection--overlay"></div>
+      <img src="https://1.bp.blogspot.com/-JBwwgIDnWoc/XBHngQ8Aq5I/AAAAAAAAAAY/Ix9yGqvx0wsrx7q-pd_INJ2Odi2DVB9HwCLcBGAs/s1600/01.jpg" alt="queen-cover-page">
+      <h1>Queen</h1>
+      <div class="btn">
+        <button>Play</button>
+        <button>Follow</button>
+        <button>...</button>
+      </div>
+      <ul class="selectSubPage">
+        <li data-noSelect="true">Overview</li>
+        <li data-noSelect="true">Fans also like</li>
+        <li data-noSelect="true">About</li>
+        <li data-noSelect="true">Cocerts</li>
+      </ul>
+      <div class="mostPopular">
+        <h3>Popular</h3>
+        <ul class="mostPopular__list"></ul>
+      </div>
+      <div class="albumList">
+        <h3>Albums</h3>
+        <hr>
+        <div class="albumList__piece">
+          <div class="albumList__piece--header">
+            <img src="" alt="album-cover">
+            <div class="header__info">              
+              <p>2020</p>
+              <h2>Live Around The World (Deluxe)</h2>
+              <i>♥</i>
+              <i>...</i>
+            </div>
+          </div>
+          <div class="albumList__piece--list"></div>
         </div>
       </div>
-      <hr>
-      <div class="wrapperList beatles"></div>
-    </div>
-    <!-- AC/DC -->
-    <div class="wrapperTracks">
-      <div class="wrapperTracks__header">
-        <h2>AC/DC</h2>
-        <div class="dirBtn" id="ac-dc">
-          <button class="dirBtn__right"> < </button>
-          <button class="dirBtn__left"> > </button>
-        </div>
-      </div>
-      <hr>
-      <div class="wrapperList ac-dc"></div>
-    </div>
-    <!-- Queen -->
-    <div class="wrapperTracks">
-      <div class="wrapperTracks__header">
-        <h2>Queen</h2>
-        <div class="dirBtn" id="queen">
-          <button class="dirBtn__right"> < </button>
-          <button class="dirBtn__left"> > </button>
-        </div>
-      </div>
-      <hr>
-      <div class="wrapperList queen"></div>
-    </div>
-    <!-- Black Sabbath -->
-    <div class="wrapperTracks">
-      <div class="wrapperTracks__header">
-        <h2>Black Sabbath</h2>
-        <div class="dirBtn" id="black-sabbath">
-          <button class="dirBtn__right"> < </button>
-          <button class="dirBtn__left"> > </button>
-        </div>
-      </div>
-      <hr>
-      <div class="wrapperList black-sabbath"></div>
     </div>
   </main>
   <footer class="taskbar">
@@ -122,41 +110,9 @@
       <i class="fas fa-expand-alt"></i>
     </div>
   </footer>
-  <script src="./js/main.js" type="module"></script>
+  <!-- <script src="./js/main.js" type="module"></script> -->
   <script src="./js/sidebar.js" type="module"></script>  
-  <script src="./js/home.js" type="module"></script>  
+  <!-- <script src="./js/home.js" type="module"></script>   -->
   <script src="./js/footer.js" type="module"></script>  
 </body>
 </html>
-
-
-<!--
-  Band IDs:
-    Beatles: 111247
-    Black Sabbath: 111381
-    AC/DC: 119231
-    Nirvana: 111319
-    Daft Punk: 111492
-    Queen: 111238
- -->
-
-
-<!-- 
-  Albums ID:
-    Yellow Submarine: 2118146 X
-    Paranoid: 2111578 X
-    Back in Black: 2159636 X
-    Nevermind: 2110839
-    Random Access Memories: 2162908
-    A Night at the Opera: 2116679 X 
--->
-
-<!-- 
-  Tracks:
-    https://theaudiodb.com/api/v1/json/1/track.php?m=2118146
-    https://theaudiodb.com/api/v1/json/1/track.php?m=2111578
-    https://theaudiodb.com/api/v1/json/1/track.php?m=2159636
-    https://theaudiodb.com/api/v1/json/1/track.php?m=2110839
-    https://theaudiodb.com/api/v1/json/1/track.php?m=2162908
-    https://theaudiodb.com/api/v1/json/1/track.php?m=2116679
- -->

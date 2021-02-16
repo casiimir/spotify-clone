@@ -4,8 +4,11 @@ const putSimbolOnSelected = () => {
 
   liDOMEls.forEach((el) => {
     el.addEventListener('click', () => {
-      selectedItem.classList.add('selectedItem');
-      el.appendChild(selectedItem);
+      // Check selection <li> or not
+      if (!el.dataset.noselect){
+        selectedItem.classList.add('selectedItem');
+        el.appendChild(selectedItem);
+      }
     })    
   });
 }
