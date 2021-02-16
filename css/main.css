@@ -298,13 +298,12 @@ button:active {
   font-size: 0.9rem;
   letter-spacing: 1.5px;
 }
-.artistSection .artistSection__header .selectSubPage li:nth-child(1)::before {
-  position: absolute;
-  left: 130px;
-  bottom: -10px;
+.artistSection .artistSection__header .selectSubPage .overview {
+  position: relative;
+  top: 25px;
+  left: 25px;
   width: 30px;
   height: 2px;
-  content: "";
   background: #13eb5f;
 }
 .artistSection .mostPopular {
