@@ -63,6 +63,7 @@ button:hover {
 }
 button:active {
   opacity: 0.7;
+  transform: scale(1);
 }
 
 .sidebar {
@@ -236,6 +237,7 @@ button:active {
   width: 170px;
   height: 4px;
   border-radius: 100%;
+  filter: invert(10%) sepia(15%) saturate(11368%) hue-rotate(670deg) brightness(95%) contrast(94%);
 }
 .taskbar .taskbar__trackAudio {
   padding: 25px;
@@ -325,7 +327,8 @@ button:active {
   background-color: #303030;
 }
 .artistSection .mostPopular .mostPopular__list li span {
-  align-self: center;
+  display: flex;
+  align-items: center;
   flex-basis: 40px;
 }
 .artistSection .mostPopular .mostPopular__list li :nth-child(3) {
@@ -336,6 +339,23 @@ button:active {
 }
 .artistSection .albumList h3 {
   padding: 5px 0 15px 0;
+}
+.artistSection .albumList .albumList__piece li {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 38px;
+  border-bottom: 1px solid #303030;
+}
+.artistSection .albumList .albumList__piece li:hover {
+  background-color: #303030;
+}
+.artistSection .albumList .albumList__piece li span {
+  align-self: center;
+  flex-basis: 40px;
+}
+.artistSection .albumList .albumList__piece li :nth-child(3) {
+  flex-basis: 100%;
 }
 .artistSection .albumList .albumList__piece .albumList__piece--header {
   display: flex;
