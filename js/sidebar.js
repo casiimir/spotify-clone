@@ -13,6 +13,5 @@ const putSimbolOnSelected = () => {
   });
 }
 
+// Self init
 putSimbolOnSelected();
-
-/* <div class="selectedItem"></div> */

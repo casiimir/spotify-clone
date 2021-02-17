@@ -1,4 +1,4 @@
-import { getTopTen, getAlbumsFrom, getTracksByAlbum } from './home.js';
+import { getTopTen, getAlbumsFrom, getTracksByAlbum, getAlbumBy } from './home.js';
 
 // Utils
 const setScore = (val) => Math.floor(val) + '/10';
@@ -6,19 +6,49 @@ const setScore = (val) => Math.floor(val) + '/10';
 // Audio player (actually works with top populary tracks)
 const playTopPopTrack = () => {
   const mostPopularList = document.querySelector('.mostPopular__list');
+  
+  mostPopularList.addEventListener('click', isTargetID);
+}
 
-  mostPopularList.addEventListener('click',isTargetID);
+// Check only if heart was clicked ♥
+const isFavouriteButton = (el) => {
+  if(el.target.className === 'far fa-heart'){
+    el.target.className = 'fas fa-heart'
+    el.target.dataset.favourite = true;
+  }
+  else if(el.target.className === 'fas fa-heart'){
+    el.target.className = 'far fa-heart';
+    el.target.dataset.favourite  = false;
+  }
 }
 
 // Check if the selection item is out play runner
+// it needs refact.
 const isTargetID = (e) => {  
   const audio = document.querySelector('audio'); 
   const trackAudioSource = document.querySelector('.taskbar__trackStatus');
+  const trackName = e.path[1].children[2].textContent;
 
-  if (e.target.id) {
-    trackAudioSource.src = playAudioTrackPop(e.target.id);
-    audio.load();
-    audio.play();
+  isFavouriteButton(e);
+
+  if (e.target.parentNode.localName === 'li') {
+    const albumData = getAlbumBy(e.path[1].id || e.path[0].id);
+    
+    Promise.all([albumData])
+      .then((data) => {
+        const albumCover = data[0].album[0].strAlbumThumb;
+        const artistName = data[0].album[0].strArtist;
+
+        if (e.target.id) {
+          trackAudioSource.src = playAudioTrackPop(e.target.id);
+          
+          audio.load();
+          audio.currentTime = 6.5;
+          audio.play();
+      
+          setFooterPlayingTrack(albumCover, trackName, artistName);
+        }
+    })
   }
 }
 
@@ -36,19 +66,28 @@ const playAudioTrackPop = (trackNum) => {
   return trackList[trackNum];
 }
 
+const setFooterPlayingTrack = (imgUrl, trackTitle, brandName) => {
+  const taskbarTrack = document.querySelector('.taskbar__track');
+  
+  taskbarTrack.children[0].src = imgUrl;
+  taskbarTrack.children[1].children[0].textContent = trackTitle;
+  taskbarTrack.children[1].children[1].textContent = brandName;
+}
+
 // Create Element for the Top Ten Track, necessary to populates track list
-const popTracksDOM = (trackNum, trackTitle, trackScore, parentEl) => {
+const popTracksDOM = (trackNum, trackTitle, trackScore, parentEl, albumID) => {
   const parent = document.querySelector(parentEl);
 
   const container = document.createElement('li');
   container.dataset.noSelect = true;
+  container.id = albumID;
 
   const num = document.createElement('span');
   num.textContent = trackNum + 1;
   num.id = trackNum;
 
   const fav = document.createElement('span');
-  fav.textContent = '💗';
+  fav.className = 'far fa-heart';
 
   const title = document.createElement('span');
   title.textContent = trackTitle;
@@ -100,7 +139,7 @@ topTenData.then((data) => {
   data.track.forEach((track, i) => {
     const score = setScore(track.intScore);
 
-    popTracksDOM(i, track.strTrack, score, '.mostPopular__list');
+    popTracksDOM(i, track.strTrack, score, '.mostPopular__list', track.idAlbum);
     playTopPopTrack();
   });
 })
