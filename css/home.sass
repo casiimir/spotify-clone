@@ -9,6 +9,37 @@
       display: flex
       justify-content: space-between
 
+      font-size: .85rem
+
+      .wrapperTracks--beatles:after
+        content: "🚶🏼🚶🚶🏻‍♂️🚶🏻‍♀️"
+
+        display: inline-block
+        transform: scaleX(-1)
+      
+      .wrapperTracks--queen:after
+        content: "👑"
+
+        display: inline-block
+        position: relative
+        top: -13px
+        right: 78px
+
+        font-size: 1.6rem
+        transform: rotate(-20deg)
+
+      .wrapperTracks--black-sabbath:after
+        content: '🎸'
+
+        display: inline-block
+        position: relative
+        top: -5px
+        left: -41.4px
+
+        font-size: 2.1rem
+
+        transform: rotate(135deg)
+
       .dirBtn
         .dirBtn__right, .dirBtn__left
           padding: 0 10px
@@ -43,10 +74,13 @@
 
         margin: 0 2% 0 0
 
-        scroll-snap-align: start
-        
+        scroll-snap-align: start             
+
         img
           width: 180px
+          transition: opacity .25s
+          &:hover
+            opacity: .25
 
         strong
           padding: 10px 0 0 0

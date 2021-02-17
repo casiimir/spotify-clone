@@ -11,6 +11,7 @@ const playTopPopTrack = () => {
 }
 
 // Check only if heart was clicked ♥
+// and put it into the local storage
 const isFavouriteButton = (el) => {
   if(el.target.className === 'far fa-heart'){
     el.target.className = 'fas fa-heart'
@@ -166,3 +167,9 @@ getAlbumsFrom(111238).then((albums) => {
     })
   })
 })
+
+
+const states = {
+  // local refers to the playlist in the sidebar
+  local: []
+}
