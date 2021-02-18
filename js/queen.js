@@ -26,8 +26,9 @@ const isFavouriteButton = (el) => {
 // Check if the selection item is out play runner
 // it needs refact.
 const isTargetID = (e) => {  
-  const audio = document.querySelector('audio'); 
-  const trackAudioSource = document.querySelector('.taskbar__trackStatus');
+  const audio = document.querySelector('.audioTag'); 
+  const trackAudioSource = document.querySelector('.audioTag');
+  
   const trackName = e.path[1].children[2].textContent;
 
   isFavouriteButton(e);

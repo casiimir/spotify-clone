@@ -100,10 +100,10 @@
   </main>
   <footer class="taskbar">
     <div class="taskbar__track">
-      <img src="https://www.nonstop2k.com/midi-files/covers/7986.jpg" alt="track-cover">
+      <img src="./default-cover.png" alt="track-cover">
       <div class="info">
-        <strong>Overture</strong>
-        <p>Daft Punk</p>
+        <strong> </strong>
+        <p></p>
       </div>
     </div>
     <div class="taskbar__trackStatus">
@@ -112,13 +112,14 @@
         <i class="fas fa-play"></i>
         <i class="fas fa-step-forward"></i>
       </div>
-      <div class="audioProgress">
-        <input type="range" id="volume" name="volume">
+      <div class="audioProgress statusBar">
+        <audio id="999" class="audioTag" src="#"></audio>
+        <!-- <input type="range" class="statusBar__range" id="volume" name="volume"> -->
       </div>
     </div>
     <div class="taskbar__trackAudio">
       <i class="fas fa-volume-up"></i>
-      <input type="range">
+      <input type="range" class="statusBar__volume">
       <i class="fas fa-expand-alt"></i>
     </div>
   </footer>

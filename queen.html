@@ -113,13 +113,24 @@
       </div>
     </div> -->
 
-    <audio controls>
-      <source class="taskbar__trackStatus" type="audio/ogg">
-    </audio>
+    <div class="taskbar__trackStatus">
+      <div class="audioSetter">
+        <i class="fas fa-step-backward"></i>
+        <i id="playButton" class="fas fa-play"></i>
+        <i class="fas fa-step-forward"></i>
+      </div>
+      
+      <div class="audioProgress statusBar">
+        <p class="audioProgress__actual"></p>
+        <audio class="audioTag"></audio>
+        <input type="range" class="statusBar__range" id="volume" name="volume">
+        <p class="audioProgress__total"></p>
+      </div>
+    </div>
 
     <div class="taskbar__trackAudio">
       <i class="fas fa-volume-up"></i>
-      <input type="range">
+      <input type="range" class="statusBar__volume">
       <i class="fas fa-expand-alt"></i>
     </div>
   </footer>

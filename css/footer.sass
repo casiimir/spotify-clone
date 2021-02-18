@@ -17,6 +17,8 @@
 
   .taskbar__track
     display: flex
+    min-width: 200px
+    max-width: 200px
 
     img
       height: 55px
@@ -56,10 +58,11 @@
         opacity: .7
 
 
-    .fa-play
-      padding: 11px
+    .fa-play,
+    .fa-pause
+      padding: 13px
 
-      font-size: .9rem
+      font-size: .85rem
 
       border: 1px solid $extra-color
       border-radius: 100%
@@ -72,12 +75,22 @@
         opacity: .7
 
     .audioProgress
+      display: flex
+      align-items: center
+
+      > *
+        margin: 5px 10px 0
+        font-size: .9rem
+
       input
         width: 170px
         height: 4px
 
         border-radius: 100%
-        filter: invert(10%) sepia(15%) saturate(11368%) hue-rotate(670deg) brightness(95%) contrast(94%)
+        filter: grayscale(100%)
+        &:hover
+          filter: invert(10%) sepia(15%) saturate(11368%) hue-rotate(670deg) brightness(95%) contrast(94%)
+
 
   .taskbar__trackAudio
     padding: 25px
@@ -95,4 +108,7 @@
     input
       width: 100px
       height: 4px
-      border-radius: 100%   
+      border-radius: 100% 
+      filter: grayscale(100%)
+      &:hover
+        filter: invert(10%) sepia(15%) saturate(11368%) hue-rotate(670deg) brightness(95%) contrast(94%)

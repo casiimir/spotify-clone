@@ -78,15 +78,12 @@ const setBtnControl = () => {
 }
 
 // Utils
-
 // Get album cover from ID
 const getAlbumBy = async(ID) => {
   const result = await fetch(`${states.baseURL}${states.apiKEY}/album.php?m=${ID}`);
   const image = await result.json();
   return image;
 }
-
-
 
 // Carosello button scrolling on click
 const scrollCarouselTo = (element, dir) => {
