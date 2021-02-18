@@ -73,8 +73,7 @@ const setBtnControl = () => {
 
   btnLeft.forEach((el) => { //e.path[1].id
     el.addEventListener('click', (e) => scrollCarouselTo(e, 'right'));
-  })
-  
+  }) 
 }
 
 // Utils

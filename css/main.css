@@ -271,6 +271,7 @@ button:active {
 .taskbar .taskbar__trackStatus .audioProgress {
   display: flex;
   align-items: center;
+  display: none;
 }
 .taskbar .taskbar__trackStatus .audioProgress > * {
   margin: 5px 10px 0;
@@ -420,6 +421,9 @@ button:active {
   justify-content: left;
   margin-left: 10px;
 }
+.artistSection .topNtop .mostPopular .mostPopular__list li :nth-child(4) {
+  font-size: 0.85rem;
+}
 .artistSection .topNtop .videos {
   width: 50%;
 }
@@ -452,6 +456,9 @@ button:active {
 }
 .artistSection .albumList .albumList__piece li :nth-child(3) {
   flex-basis: 100%;
+}
+.artistSection .albumList .albumList__piece li :nth-child(4) {
+  font-size: 0.85rem;
 }
 .artistSection .albumList .albumList__piece .albumList__piece--header {
   display: flex;
