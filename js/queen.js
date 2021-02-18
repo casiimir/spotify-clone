@@ -13,6 +13,8 @@ const playTopPopTrack = () => {
 // Check only if heart was clicked ♥
 // and put it into the local storage
 const isFavouriteButton = (el) => {
+  // console.log(el.target.parentNode.id)
+  // console.log(localStorage.getItem('spotClonePaylist').split(','))
   if(el.target.className === 'far fa-heart'){
     el.target.className = 'fas fa-heart'
     el.target.dataset.favourite = true;
@@ -20,6 +22,36 @@ const isFavouriteButton = (el) => {
   else if(el.target.className === 'fas fa-heart'){
     el.target.className = 'far fa-heart';
     el.target.dataset.favourite  = false;
+  }
+}
+
+const appendTemporarySideBar = (trackName) => {
+  const playListSidebar = document.querySelector('.sidebar__playlist');
+  const playListLi = document.createElement('li');
+
+  playListLi.textContent = trackName;
+  if (playListLi.textContent !== 'null') {
+    playListSidebar.appendChild(playListLi);
+  }
+}
+
+// Getting track's ID put the item into the local storage, optimized: check duplicate
+const putFavInLocalStorage = (e) => {
+  const selectFavID = e.target.parentNode.id;
+
+  if (e.target.dataset.favourite) {
+    if (!states.local.includes(selectFavID)) {
+      states.local.push(selectFavID);
+      appendTemporarySideBar(e.target.parentNode.id)
+    } else {
+      states.local.splice(states.local.indexOf(selectFavID), 1);
+      // Delete DUPLICATED item from the sidebar HERE
+    }
+
+    localStorage.setItem('local', states.local);
+
+  } else {
+    throw ("You should select a track, please, try again...");
   }
 }
 
@@ -33,9 +65,12 @@ const isTargetID = (e) => {
 
   isFavouriteButton(e);
 
+  putFavInLocalStorage(e);
+
   if (e.target.parentNode.localName === 'li') {
     const albumData = getAlbumBy(e.path[1].id || e.path[0].id);
     
+
     Promise.all([albumData])
       .then((data) => {
         const albumCover = data[0].album[0].strAlbumThumb;
@@ -82,7 +117,8 @@ const popTracksDOM = (trackNum, trackTitle, trackScore, parentEl, albumID) => {
 
   const container = document.createElement('li');
   container.dataset.noSelect = true;
-  container.id = albumID;
+  // container.id = albumID;
+  container.id = trackTitle;
 
   const num = document.createElement('span');
   num.textContent = trackNum + 1;
@@ -174,3 +210,18 @@ const states = {
   // local refers to the playlist in the sidebar
   local: []
 }
+
+// First of all, upload favourite tracks from localStorage
+window.addEventListener('DOMContentLoaded', () => {
+  states.local = String(localStorage.getItem('local')).split(',');
+
+  const playListSidebar = document.querySelector('.sidebar__playlist');
+  
+  states.local.map((track) => {
+    const playListLi = document.createElement('li');
+    playListLi.textContent = track;
+    if (playListLi.textContent !== 'null') {
+      playListSidebar.appendChild(playListLi);
+    }
+  })
+});
