@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+  <link rel='icon' type='image/png' href="./icon.png"/>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body data-artistName='the+beatles' data-artistID="111247">
+
+  <nav class="sidebar">
+    <ul class="sidebar__items">
+      <li>
+        <i class="fas fa-home"></i>
+        <a href="#">
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-folder"></i>
+        <span>Browse</span>
+      </li>
+    </ul>
+    <h5>YOUR LIBRARY</h5>
+    <ul class="sidebar__library">
+      <a href="./queen.html">
+        <li id="queen">Queen</li>
+      </a>
+      <a href="./cold-play.html">
+        <li id="coldplay">Coldplay</li>
+      </a>
+      <a href="./bee-gees.html">
+        <li id="bee-gees">Bee Gees</li>
+      </a>
+      <a href="./the-beatles.html">
+        <li id="the-beatles">The Beatles</li>
+      </a>
+    </ul>
+    <h5>PLAYLIST</h5>
+    <ul class="sidebar__playlist"></ul>
+  </nav>
+  <main class="home">
+    <div class="artistSection">
+      <div class="artistSection--overlay"></div>
+      <img src="./img/the-beatles.jpg" alt="queen-cover-page">
+      
+      <div class="artistSection__header">
+        <h1>The Beatles</h1>
+        <div class="btn">
+          <button>Play</button>
+          <button>Follow</button>
+          <button>...</button>
+        </div>
+        <ul class="selectSubPage">
+          <li data-noSelect="true">
+            <div class="overview"></div>
+            Overview
+          </li>
+          <li data-noSelect="true">Fans also like</li>
+          <li data-noSelect="true">About</li>
+          <li data-noSelect="true">Conscerts</li>
+        </ul>
+      </div>
+
+      <div class="topNtop">
+        <div class="mostPopular">
+          <h3>Popular</h3>
+          <ul class="mostPopular__list"></ul>
+        </div>
+        <div class="videos">
+          <iframe src="https://www.youtube.com/embed/CTsB-llTzyc?controls=0&amp;start=10"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          >
+          </iframe>          
+        </div>
+      </div>
+
+      <div class="albumList">
+        <h3>Albums</h3>
+        <hr>
+        <div class="albumList__piece"></div>
+      </div>
+
+    </div>
+  </main>
+  <footer class="taskbar">
+    <div class="taskbar__track">
+      <img src="./default-cover.png" alt="track-cover">
+      <div class="info">
+        <strong> </strong>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="taskbar__trackStatus">
+      <div class="audioSetter">
+        <i class="fas fa-step-backward"></i>
+        <i id="playButton" class="fas fa-play"></i>
+        <i class="fas fa-step-forward"></i>
+      </div>
+      
+      <div class="audioProgress statusBar">
+        <p class="audioProgress__actual"></p>
+        <audio class="audioTag"></audio>
+        <input type="range" class="statusBar__range" id="volume" name="volume">
+        <p class="audioProgress__total"></p>
+      </div>
+    </div>
+
+    <div class="taskbar__trackAudio">
+      <i class="fas fa-volume-up"></i>
+      <input type="range" class="statusBar__volume">
+      <i class="fas fa-expand-alt"></i>
+    </div>
+  </footer>
+  <!-- <script src="./js/main.js" type="module"></script> -->
+  <script src="./js/sidebar.js" type="module"></script>  
+  <!-- <script src="./js/home.js" type="module"></script>   -->
+  <script src="./js/footer.js" type="module"></script>  
+  <script src="./js/artistPage.js" type="module"></script>  
+</body>
+</html>

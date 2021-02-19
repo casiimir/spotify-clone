@@ -10,7 +10,7 @@
   <link rel='icon' type='image/png' href="./icon.png"/>
   <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
+<body data-artistName='queen' data-artistID = '111238'>
 
   <nav class="sidebar">
     <ul class="sidebar__items">
@@ -31,16 +31,13 @@
         <li id="queen">Queen</li>
       </a>
       <a href="./cold-play.html">
-        <li id="beatles">Coldplay</li>
+        <li id="coldplay">Coldplay</li>
       </a>
       <a href="./bee-gees.html">
-        <li id="black-sabbath">Bee Gees</li>
+        <li id="bee-gees">Bee Gees</li>
       </a>
-      <a href="./pooh.html">
-        <li id="ac/dc">Pooh</li>
-      </a>
-      <a href="./pink-floyd">
-        <li id="daft-punk">Pink Floyd</li>
+      <a href="./the-beatles.html">
+        <li id="the-beatles">The Beatles</li>
       </a>
     </ul>
     <h5>PLAYLIST</h5>
@@ -49,7 +46,7 @@
   <main class="home">
     <div class="artistSection">
       <div class="artistSection--overlay"></div>
-      <img src="https://1.bp.blogspot.com/-JBwwgIDnWoc/XBHngQ8Aq5I/AAAAAAAAAAY/Ix9yGqvx0wsrx7q-pd_INJ2Odi2DVB9HwCLcBGAs/s1600/01.jpg" alt="queen-cover-page">
+      <img src="./img/queen.jpg" alt="queen-cover-page">
       
       <div class="artistSection__header">
         <h1>Queen</h1>
@@ -78,7 +75,6 @@
           <iframe src="https://www.youtube.com/embed/-tJYN-eG1zk?controls=0&amp;start=10"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
           >
           </iframe>          
         </div>
@@ -100,16 +96,6 @@
         <p></p>
       </div>
     </div>
-    <!-- <div class="taskbar__trackStatus">
-      <div class="audioSetter">
-        <i class="fas fa-step-backward"></i>
-        <i class="fas fa-play"></i>
-        <i class="fas fa-step-forward"></i>
-      </div>
-      <div class="audioProgress">
-        <input type="range" id="volume" name="volume">
-      </div>
-    </div> -->
 
     <div class="taskbar__trackStatus">
       <div class="audioSetter">
@@ -136,6 +122,7 @@
   <script src="./js/sidebar.js" type="module"></script>  
   <!-- <script src="./js/home.js" type="module"></script>   -->
   <script src="./js/footer.js" type="module"></script>  
-  <script src="./js/queen.js" type="module"></script>  
+  <script src="./js/artistPage.js" type="module"></script>  
+  <script src="./js/trackListMP3.js" type="module"></script>  
 </body>
 </html>
