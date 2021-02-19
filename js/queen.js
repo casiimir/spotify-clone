@@ -51,7 +51,6 @@ const putFavInLocalStorage = (e) => {
       appendTemporarySideBar(selectFavTrackName);
     } else {
       states.local.splice(states.local.indexOf(selectFavTrackName), 1);
-      // Delete DUPLICATED item from the sidebar HERE
     }
 
     localStorage.setItem('local', states.local);

@@ -98,6 +98,11 @@
 
           &:hover
             background-color: $taskbar-color
+          &:active
+            color: $primary-color
+          &:visited
+            color: $primary-color
+            
 
           span
             display: flex
@@ -152,6 +157,8 @@
 
         border-bottom: 1px solid $taskbar-color
 
+        opacity: .5
+
         &:hover
           background-color: $taskbar-color
 
@@ -173,10 +180,19 @@
         img
           width: 135px
           height: 135px
+
+          &:hover
+            opacity: .5
+          &:hover  ~ .header__info
+            opacity: 1
+            transform: scale(1.3)
         
         .header__info
           margin: 0 15px
-          font-size: 1.6rem
+          font-size: 1.2rem
+
+          opacity: .75
+          transition: .35s
 
           > *
             margin: 5px 0

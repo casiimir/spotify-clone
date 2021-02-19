@@ -401,6 +401,12 @@ button:active {
 .artistSection .topNtop .mostPopular .mostPopular__list li:hover {
   background-color: #303030;
 }
+.artistSection .topNtop .mostPopular .mostPopular__list li:active {
+  color: #13eb5f;
+}
+.artistSection .topNtop .mostPopular .mostPopular__list li:visited {
+  color: #13eb5f;
+}
 .artistSection .topNtop .mostPopular .mostPopular__list li span {
   display: flex;
   justify-content: center;
@@ -446,6 +452,7 @@ button:active {
   width: 100%;
   height: 38px;
   border-bottom: 1px solid #303030;
+  opacity: 0.5;
 }
 .artistSection .albumList .albumList__piece li:hover {
   background-color: #303030;
@@ -470,9 +477,18 @@ button:active {
   width: 135px;
   height: 135px;
 }
+.artistSection .albumList .albumList__piece .albumList__piece--header img:hover {
+  opacity: 0.5;
+}
+.artistSection .albumList .albumList__piece .albumList__piece--header img:hover ~ .header__info {
+  opacity: 1;
+  transform: scale(1.3);
+}
 .artistSection .albumList .albumList__piece .albumList__piece--header .header__info {
   margin: 0 15px;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
+  opacity: 0.75;
+  transition: 0.35s;
 }
 .artistSection .albumList .albumList__piece .albumList__piece--header .header__info > * {
   margin: 5px 0;
