@@ -4,6 +4,8 @@
   <img src="./spotify-img.jpg" alt="spotify-img" width=300>
 </p>
 
+<hr>
+
 <h3 align="center">
   A Spotify clone, an exercise, a test... my version.
 </h3>
