@@ -88,7 +88,7 @@ const isTargetID = (e) => {
           const trackAudioFromMP3 = trackListMP3[artistNameFromHTML][e.target.id];
 
           trackAudioSource.src = trackAudioFromMP3; // Local Version
-          trackAudioSource.src = trackAudioFromMP3.replace('..', ''); // Online V. (GitHub)
+          trackAudioSource.src = trackAudioFromMP3.replace('..', '.'); // Online V. (GitHub)
           console.log(trackAudioSource.src)
           audio.load();
           audio.currentTime = 6.5;
